@@ -1,12 +1,17 @@
 let path = require('path')
-function resolve (dir) {
+
+function resolve(dir) {
   return path.join(__dirname, dir)
 }
 
 module.exports = {
   baseUrl: './',
   devServer: {
-    port: 8080
+    port: 8080,
+    overlay: {
+      warnings: false,
+      errors: false
+    }
   },
   chainWebpack: config => {
     config.resolve.alias

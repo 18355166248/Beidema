@@ -126,10 +126,10 @@ textarea {
   outline: none;
   resize: none;
 }
-.f-left {
+.fl {
   float: left;
 }
-.f-right {
+.fr {
   float: right;
 }
 .clearfix::after,
