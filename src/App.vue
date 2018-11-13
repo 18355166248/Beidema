@@ -3,13 +3,19 @@
     <div ref="fPageFirst">
       <first-page></first-page>
     </div>
-    <div>211231</div>
-    <div>3</div>
+    <div>
+      <twice-page></twice-page>
+    </div>
+    <div>
+      <third-page></third-page>
+    </div>
   </div>
 </template>
 
 <script>
-  import firstPage from "components/first-page";
+  import firstPage from "components/first-page"
+  import twicePage from "components/twice-page"
+  import thirdPage from "components/third-page"
 
   export default {
     name: "app",
@@ -70,7 +76,9 @@
       }
     },
     components: {
-      firstPage
+      firstPage,
+      twicePage,
+      thirdPage
     }
   };
 </script>
