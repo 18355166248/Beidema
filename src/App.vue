@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="g-fullPage" ref="gFullPage">
-    <div class="f-pageFirst" ref="fPageFirst">
+    <div ref="fPageFirst">
       <first-page></first-page>
     </div>
     <div>211231</div>
@@ -87,6 +87,7 @@
       text-align: center;
       line-height: 100%;
       transition: 0.5s ease-in;
+      position: relative;
     }
   }
 </style>
