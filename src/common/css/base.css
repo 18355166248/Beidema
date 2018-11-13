@@ -11,6 +11,9 @@ html * {
   -webkit-box-sizing: border-box;
   /*要兼容 webkit 浏览器内核厂商 这种情况一般是老的移动端浏览器*/
   box-sizing: border-box;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 html,
 body {

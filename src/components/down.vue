@@ -28,7 +28,7 @@
       bottom: 20px;
     }
     44% {
-      bottom: 70px;
+      bottom: 60px;
       transform: scale(1.06)
     }
     100% {
