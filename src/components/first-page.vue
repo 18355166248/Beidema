@@ -13,10 +13,10 @@
     </div>
     <div class="video">
       <video-player  class="vjs-custom-skin"
-                         ref="videoPlayer"
-                         :options="playerOptions"
-                         :playsinline="true">
-          </video-player>
+                      ref="videoPlayer"
+                      :options="playerOptions"
+                      :playsinline="true">
+      </video-player>
     </div>
     <div class="footer">
       <div class="text">其实</div>
@@ -33,12 +33,24 @@
 </template>
 
 <script>
-import "video.js/dist/video-js.css";
-import "./custom-theme.css";
 import { videoPlayer } from "vue-video-player";
 import arrowDown from "components/down";
 
 export default {
+  props: ['touchNum'],
+  watch: {
+    touchNum(newval) {
+      if (newval === 1) this.player.el_.firstChild.pause()
+    }
+  },
+  mounted() {
+    console.log('this is current player instance object111111', this.player)
+  },
+  computed: {
+    player() {
+      return this.$refs.videoPlayer.player
+    }
+  },
   data() {
     return {
       titleUrl: require("@/assets/logo.png"),
@@ -77,7 +89,6 @@ export default {
   mounted() {},
   computed: {
     player() {
-      console.log(213);
       return this.$refs.videoPlayer.player;
     }
   },

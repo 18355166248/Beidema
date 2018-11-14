@@ -144,6 +144,9 @@ textarea {
   visibility: hidden;
   clear: both;
 }
+.w100 {
+  width: 100%;
+}
 .w33 {
   width: 33.3333%;
 }
@@ -214,7 +217,9 @@ textarea {
   width: 100%;
   height: 100%;
 }
-
+.marginAuto {
+  margin: 0 auto;
+}
 img {
   content: normal !important;
 }
