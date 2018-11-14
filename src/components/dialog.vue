@@ -1,6 +1,6 @@
 <template>
-  <div class="dialog" @touchstart="$emit('changeData', 'show', false)">
-    <div class="content common-position" @touchstart.stop>
+  <div class="dialog" @click="$emit('changeData', 'show', false)">
+    <div class="content" @click.stop>
       <div class="border-box">
         <img :src="list.url">
       </div>
@@ -25,7 +25,7 @@
 
 <style scoped lang='less'>
   .dialog {
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, .6);
@@ -35,6 +35,11 @@
     .content {
       width: 454px;
       height: 584px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -227px;
+      margin-top: -292px;
       display: flex;
       flex-direction: column;
       justify-content: center;

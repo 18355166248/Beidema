@@ -60,6 +60,7 @@
           this.list = this.wechatList
         }
         this.show = true
+        console.log(this.show)
       }
     },
     components: {
@@ -141,5 +142,18 @@
       font-family: '华文黑体';
       box-shadow: 5px 8px rgba(7, 45, 94, .3);
     }
+  }
+
+  /* 可以设置不同的进入和离开动画 */
+  /* 设置持续时间和动画函数 */
+  .fade-enter-active {
+    opacity: 1;
+    transition: all .3s ease;
+  }
+  .fade-leave-active {
+    transition: all .3s;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
   }
 </style>
