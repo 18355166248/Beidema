@@ -27,12 +27,6 @@ import arrowDown from 'components/down'
 import { videoPlayer } from 'vue-video-player'
 
 export default {
-  props: ['touchNum'],
-  watch: {
-    touchNum(newval) {
-      if (newval === 3 || newval === 1) this.player.el_.firstChild.pause()
-    }
-  },
   data() {
     return {
       playerOptions: {

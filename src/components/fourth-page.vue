@@ -19,30 +19,51 @@
     </div>
     <div class="content-2">抢先体验舒妍修护限量套装</div>
     <div class="button" style="margin-bottom: 43px;">
-      <div class="button-one" @touchstart="$emit('showDialog', 0)">
+      <div class="button-one" @click="showDialog(0)">
         申领试用
       </div>
     </div>
     <div class="button">
-      <div class="button-one" @touchstart="$emit('showDialog', 1)">
+      <div class="button-one" @click="showDialog(1)">
         预约线下体验
       </div>
     </div>
+    <!-- 弹窗 -->
+    <transition name="fade">
+      <template v-if="show">
+        <my-dialog :list="list" @changeData="changeData"></my-dialog>
+      </template>
+    </transition>
   </div>
 </template>
 
 <script>
+  import myDialog from 'components/dialog'
+
   export default {
     data() {
       return {
-        
+        show: false,
+        wechatList: {url: require('@/assets/wechat1.png'), list: ['长按扫描二维码', '关注法国贝德玛公众号', '申领试用']},
+        smallList: {url: require('@/assets/small-p.png'), list: ['长按识别小程序', '查询法国贝德玛线下门店', '预约体验']},
+        list: {url: '', list: []}
       }
     },
     methods: {
-      
+      changeData(name, data) {
+        this[name] = data
+      },
+      showDialog(type) {
+        if (type) {
+          this.list = this.smallList
+        } else {
+          this.list = this.wechatList
+        }
+        this.show = true
+      }
     },
     components: {
-      
+      myDialog
     }
   }
 </script>

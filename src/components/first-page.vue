@@ -37,12 +37,6 @@ import { videoPlayer } from "vue-video-player";
 import arrowDown from "components/down";
 
 export default {
-  props: ['touchNum'],
-  watch: {
-    touchNum(newval) {
-      if (newval === 1) this.player.el_.firstChild.pause()
-    }
-  },
   mounted() {
     console.log('this is current player instance object111111', this.player)
   },
